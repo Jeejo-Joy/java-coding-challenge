@@ -26,12 +26,17 @@ As we are using user story format to specify our requirements, here are the user
 	
 	http://localhost:8080/api/currencies
 
+	![All_currencies](/images/All_currencies.png)
+
 
 - As a client, I want to get all EUR-FX exchange rates at all available dates as a collection
 
 	Example:
 		
 	http://localhost:8080/api/exchange-rates
+	
+	![All_exchange_rates](/images/All_exchange_rates.png)
+	
 	
 - As a client, I want to get the EUR-FX exchange rate at particular day
 
@@ -41,6 +46,8 @@ As we are using user story format to specify our requirements, here are the user
 	http://localhost:8080/api/convert/exchange-rates/{date}
 	
 	http://localhost:8080/api/exchange-rates/2022-09-12
+	
+	![Exchangerate_by_date](/images/Exchangerate_by_date.png)
 	
 
 - As a client, I want to get a foreign exchange amount for a given currency converted to EUR on a particular day
@@ -54,6 +61,8 @@ As we are using user story format to specify our requirements, here are the user
 	http://localhost:8080/api/convert/{currency}/{value}/{date}
 	
 	http://localhost:8080/api/convert/USD/2022/2022-09-12
+
+	![Currency_rate_conversion](/images/Currency_rate_conversion.png)
 
 If you think that your service would require storage, please use H2 for simplicity, even if this would not be your choice if 
 you would implement an endpoint for real clients. 
