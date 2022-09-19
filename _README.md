@@ -21,39 +21,9 @@ The exchange rates can be received from [2]. This is a public service provided b
 As we are using user story format to specify our requirements, here are the user stories to implement:
 
 - As a client, I want to get a list of all available currencies
-
-	Example:
-	
-	http://localhost:8080/api/currencies
-
-
 - As a client, I want to get all EUR-FX exchange rates at all available dates as a collection
-
-	Example:
-		
-	http://localhost:8080/api/exchange-rates
-	
 - As a client, I want to get the EUR-FX exchange rate at particular day
-
-	Example:
-	
-	with specific date
-	http://localhost:8080/api/convert/exchange-rates/{date}
-	
-	http://localhost:8080/api/exchange-rates/2022-09-12
-	
-
 - As a client, I want to get a foreign exchange amount for a given currency converted to EUR on a particular day
-
-	Example:
-	
-	By default today's date
-	http://localhost:8080/api/convert/{currency}/{value}
-	
-	with specific date
-	http://localhost:8080/api/convert/{currency}/{value}/{date}
-	
-	http://localhost:8080/api/convert/USD/2022/2022-09-12
 
 If you think that your service would require storage, please use H2 for simplicity, even if this would not be your choice if 
 you would implement an endpoint for real clients. 
@@ -80,10 +50,6 @@ The project was generated through the Spring initializer [1] for Java
 
 ````shell script
 $ mvn spring-boot:run
-
-debug:
- mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000"
-
 ````
 
 After running, the project, switch to your browser and hit http://localhost:8080/api/currencies. You should see some 
